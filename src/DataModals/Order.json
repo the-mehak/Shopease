@@ -1,0 +1,31 @@
+{
+    "_id": "string",
+    "user": "string",
+    "orderItems": [
+        {
+            "product": "string",
+            "name": "string",
+            "image": "string",
+            "price": "number",
+            "qty": "number"
+        }
+    ],
+    "shippingAddress": {
+        "address": "string",
+        "city": "string",
+        "postalCode": "string",
+        "country": "string"
+    },
+    "paymentMethod": "cod | card | upi | paypal",
+    "itemsPrice": "number",
+    "couponCode": "string (optional)",
+    "discountAmount": "number",
+    "taxPrice": "number",
+    "shippingPrice": "number",
+    "totalPrice": "number",
+    "isPaid": "boolean",
+    "paidAt": "string (optional)",
+    "status": "pending | processing | shipped | delivered | cancelled",
+    "deliveredAt": "string (optional)",
+    "createdAt": "string"
+}

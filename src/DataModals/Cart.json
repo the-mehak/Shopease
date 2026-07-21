@@ -1,0 +1,20 @@
+{
+    "_id": "string",
+    "items": [
+        {
+            "product": {
+                "_id": "string",
+                "name": "string",
+                "price": "number",
+                "image": "string",
+                "countInStock": "number",
+                "brand": "string",
+                "category": "string"
+            },
+            "qty": "number",
+            "subtotal": "number"
+        }
+    ],
+    "totalItems": "number",
+    "totalPrice": "number"
+}

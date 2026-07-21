@@ -1,0 +1,7 @@
+{
+  "_id": "string",
+  "name": "string",
+  "email": "string",
+  "isAdmin": false,
+  "createdAt": "string"
+}

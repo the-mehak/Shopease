@@ -1,0 +1,12 @@
+{
+    "_id": "string",
+    "code": "string",
+    "type": "percent | fixed",
+    "value": "number",
+    "minOrderValue": "number",
+    "maxDiscount": "number (optional)",
+    "expiresAt": "string (optional)",
+    "usageLimit": "number (optional)",
+    "usedCount": "number",
+    "isActive": "boolean"
+}
