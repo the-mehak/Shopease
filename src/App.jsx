@@ -1,9 +1,13 @@
 import React from "react";
-import { Login } from "./pages/Login";
+// import { Login } from "./pages/Login";
+import { Product } from "./pages/Product";
+import { Navbar } from "./components/Navbar";
+
 const App = () => {
   return (
     <>
-      <Login />
+      <Navbar />
+      <Product />
     </>
   );
 };
