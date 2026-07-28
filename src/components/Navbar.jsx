@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 import "./Navbar.css";
 
-export const Navbar = ({ username = "papi", onLogout }) => {
+export const Navbar = ({ username, onLogout }) => {
   const [activeTab, setActiveTab] = useState("products");
 
   return (
@@ -14,18 +15,8 @@ export const Navbar = ({ username = "papi", onLogout }) => {
 
       {/* Center: Nav Tabs */}
       <nav className="navbar-nav">
-        <button
-          className={`nav-link ${activeTab === "products" ? "active" : ""}`}
-          onClick={() => setActiveTab("products")}
-        >
-          Products
-        </button>
-        <button
-          className={`nav-link ${activeTab === "cart" ? "active" : ""}`}
-          onClick={() => setActiveTab("cart")}
-        >
-          Cart
-        </button>
+        <Link to="/">Product</Link>
+        <Link to="/Cart">Cart</Link>
       </nav>
 
       {/* Right: User Profile & Logout */}

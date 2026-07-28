@@ -3,14 +3,12 @@ import "../styles/Product.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 axios.defaults.baseURL = "https://shopease-api-six.vercel.app/api";
-import { useCartContext } from "../context/cart_context";
 
-export const Product = () => {
+export const Product = ({ onAddToCart }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { Addtocart } = useCartContext();
   useEffect(() => {
     const fetchproducts = async () => {
       try {
@@ -61,7 +59,7 @@ export const Product = () => {
               <button
                 className="cart-button"
                 onClick={() => {
-                  Addtocart(product._id);
+                  onAddToCart(product);
                 }}
               >
                 <svg

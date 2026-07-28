@@ -2,16 +2,22 @@ import React from "react";
 
 export const cartReducer = (state, action) => {
   if (action.type === "Add_to_cart") {
-    const { productid } = action.payload;
-    console.log(productid);
+    const product = action.payload;
 
-    // 🟢 Return ko IF condition ke ANDAR hi hona chahiye
+    if (!product) {
+      return state;
+    }
+
+    const normalizedProduct =
+      typeof product === "object" && product !== null
+        ? { ...product, quantity: 1 }
+        : { id: product, quantity: 1 };
+
     return {
       ...state,
-      cart: [...state.cart, productid],
+      cart: [...state.cart, normalizedProduct],
     };
   }
 
-  // 🟢 Agar action match na ho, toh default state return karein
   return state;
 };
