@@ -55,7 +55,7 @@ export const CartPage = ({ cart = [] }) => {
           </div>
           <hr />
           <div className="summary-row total">
-            <span>Total Amount</span>
+            {/* <span>Total Amount</span> */}
             <span>${totalPrice.toFixed(2)}</span>
           </div>
           <button className="checkout-btn">Proceed to Checkout</button>
